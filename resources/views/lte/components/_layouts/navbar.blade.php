@@ -13,10 +13,10 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                     <li class="user-footer">
-                        <a href="#" class="btn btn-default btn-flat" style="width: 45%">@lang('template::lte.profile')</a>
+                        <a href="#" class="btn btn-default btn-flat" style="width: 45%">@lang('template::template.profile')</a>
                         <a class="btn btn-default btn-flat float-right" href="#" style="width: 45%"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="fa fa-fw fa-power-off"></i> @lang('template::lte.log_out')
+                            <i class="fa fa-fw fa-power-off"></i> @lang('template::template.log_out')
                         </a>
                         <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
                             @csrf

@@ -2,7 +2,7 @@
 
 return [
     'brand' => [
-        'name' => config('app.name','AdminLTE'),
+        //'name' => config('app.name','AdminLTE'),
         'logo' => 'https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png'
     ],
 
@@ -88,6 +88,8 @@ return [
             'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css',
             'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css',
             'https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.1.2/css/tempusdominus-bootstrap-4.min.css',
+            'https://cdnjs.cloudflare.com/ajax/libs/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css',
+            'https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
         ],
 
         // Scripts
@@ -97,6 +99,8 @@ return [
             'https://adminlte.io/themes/v3/plugins/inputmask/min/jquery.inputmask.bundle.min.js',
             'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js',
             'https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.1.2/js/tempusdominus-bootstrap-4.min.js',
+            'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
+            'https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js',
         ]
     ]
 ];
