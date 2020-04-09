@@ -1,6 +1,6 @@
 <?php
 
-namespace Aminetiyal\LaravelTemplate\Components;
+namespace Aminetiyal\LaravelTemplate\Components\Lte;
 
 use Illuminate\View\Component;
 
@@ -16,6 +16,6 @@ class Breadcrumb extends Component
 
     public function render()
     {
-        return view('template::components.breadcrumb');
+        return view('template::components.lte.breadcrumb');
     }
 }

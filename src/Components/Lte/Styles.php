@@ -1,6 +1,6 @@
 <?php
 
-namespace Aminetiyal\LaravelTemplate\Components;
+namespace Aminetiyal\LaravelTemplate\Components\Lte;
 
 use Illuminate\View\Component;
 
@@ -17,6 +17,6 @@ class Styles extends Component
 
     public function render()
     {
-        return view('template::components.styles');
+        return view('template::components.lte.styles');
     }
 }

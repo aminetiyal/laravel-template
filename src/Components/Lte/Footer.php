@@ -1,6 +1,6 @@
 <?php
 
-namespace Aminetiyal\LaravelTemplate\Components;
+namespace Aminetiyal\LaravelTemplate\Components\Lte;
 
 use Illuminate\View\Component;
 
@@ -13,6 +13,6 @@ class Footer extends Component
 
     public function render()
     {
-        return view('template::components.footer');
+        return view('template::components.lte.footer');
     }
 }

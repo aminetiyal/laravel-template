@@ -1,6 +1,6 @@
 <?php
 
-namespace Aminetiyal\LaravelTemplate\Components;
+namespace Aminetiyal\LaravelTemplate\Components\Lte;
 
 use Illuminate\View\Component;
 
@@ -23,6 +23,6 @@ class Navbar extends Component
      */
     public function render()
     {
-        return view('template::components.navbar');
+        return view('template::components.lte.navbar');
     }
 }

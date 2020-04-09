@@ -2,13 +2,13 @@
 
 namespace Aminetiyal\LaravelTemplate;
 
-use Aminetiyal\LaravelTemplate\Components\Breadcrumb;
-use Aminetiyal\LaravelTemplate\Components\Footer;
-use Aminetiyal\LaravelTemplate\Components\MenuItem;
-use Aminetiyal\LaravelTemplate\Components\Navbar;
-use Aminetiyal\LaravelTemplate\Components\Scripts;
-use Aminetiyal\LaravelTemplate\Components\sidebar;
-use Aminetiyal\LaravelTemplate\Components\Styles;
+use Aminetiyal\LaravelTemplate\Components\Lte\Breadcrumb;
+use Aminetiyal\LaravelTemplate\Components\Lte\Footer;
+use Aminetiyal\LaravelTemplate\Components\Lte\MenuItem;
+use Aminetiyal\LaravelTemplate\Components\Lte\Navbar;
+use Aminetiyal\LaravelTemplate\Components\Lte\Scripts;
+use Aminetiyal\LaravelTemplate\Components\Lte\sidebar;
+use Aminetiyal\LaravelTemplate\Components\Lte\Styles;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelTemplateServiceProvider extends ServiceProvider
@@ -71,7 +71,7 @@ class LaravelTemplateServiceProvider extends ServiceProvider
 
     public function loadComponents()
     {
-        $this->loadViewComponentsAs('template', [
+        $this->loadViewComponentsAs('lte', [
             Sidebar::class,
             Navbar::class,
             Styles::class,

@@ -6,13 +6,13 @@
     <title>AdminLTE 3 | Advanced form elements</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <x-template-styles></x-template-styles>
+    <x-lte-styles></x-lte-styles>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-    <x-template-navbar></x-template-navbar>
+    <x-lte-navbar></x-lte-navbar>
 
-    <x-template-sidebar></x-template-sidebar>
+    <x-lte-sidebar></x-lte-sidebar>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -24,7 +24,7 @@
                         <h1>@yield('pageTitle', 'Page')</h1>
                     </div>
                     <div class="col-sm-6">
-                        <x-template-breadcrumb></x-template-breadcrumb>
+                        <x-lte-breadcrumb></x-lte-breadcrumb>
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
@@ -39,7 +39,7 @@
         <!-- /.content -->
     </div>
 
-    <x-template-footer></x-template-footer>
+    <x-lte-footer></x-lte-footer>
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
@@ -49,6 +49,6 @@
 </div>
 <!-- ./wrapper -->
 
-<x-template-scripts></x-template-scripts>
+<x-lte-scripts></x-lte-scripts>
 </body>
 </html>

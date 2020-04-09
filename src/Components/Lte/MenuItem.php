@@ -1,6 +1,6 @@
 <?php
 
-namespace Aminetiyal\LaravelTemplate\Components;
+namespace Aminetiyal\LaravelTemplate\Components\Lte;
 
 use Illuminate\View\Component;
 
@@ -96,6 +96,6 @@ class MenuItem extends Component
 
     public function render()
     {
-        return view('template::components.menu-item');
+        return view('template::components.lte.menu-item');
     }
 }

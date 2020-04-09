@@ -1,6 +1,6 @@
 <?php
 
-namespace Aminetiyal\LaravelTemplate\Components;
+namespace Aminetiyal\LaravelTemplate\Components\Lte;
 
 use Illuminate\View\Component;
 
@@ -15,6 +15,6 @@ class Scripts extends Component
 
     public function render()
     {
-        return view('template::components.scripts');
+        return view('template::components.lte.scripts');
     }
 }

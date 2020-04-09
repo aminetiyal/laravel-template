@@ -16,7 +16,7 @@
             @if(config('template.sidebar.small-text')) text-sm @endif" data-widget="treeview" role="menu"
                 data-accordion="false">
                 @foreach($menus as $menu)
-                    <x-template-menu-item :menu="$menu"></x-template-menu-item>
+                    <x-lte-menu-item :menu="$menu"></x-lte-menu-item>
                 @endforeach
             </ul>
         </nav>

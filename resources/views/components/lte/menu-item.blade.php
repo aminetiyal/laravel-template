@@ -21,7 +21,7 @@
     @if($hasTreeView)
         <ul class="nav nav-treeview">
             @foreach($submenus as $submenu)
-                <x-template-menu-item :menu="$submenu"></x-template-menu-item>
+                <x-lte-menu-item :menu="$submenu"></x-lte-menu-item>
             @endforeach
         </ul>
     @endif
