@@ -2,6 +2,7 @@
 
 return [
     'profile' => 'Profile',
+    'email' => 'Email',
     'password' => 'Password',
     'retype_password' => 'Retype password',
     'remember_me' => 'Remember Me',

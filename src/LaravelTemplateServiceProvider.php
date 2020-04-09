@@ -3,6 +3,8 @@
 namespace Aminetiyal\LaravelTemplate;
 
 use Aminetiyal\LaravelTemplate\Components\Lte\Breadcrumb;
+use Aminetiyal\LaravelTemplate\Components\Lte\Field\Input;
+use Aminetiyal\LaravelTemplate\Components\Lte\Field\Password;
 use Aminetiyal\LaravelTemplate\Components\Lte\Footer;
 use Aminetiyal\LaravelTemplate\Components\Lte\MenuItem;
 use Aminetiyal\LaravelTemplate\Components\Lte\Navbar;
@@ -83,6 +85,7 @@ class LaravelTemplateServiceProvider extends ServiceProvider
 
     public function loadAdminLteComponents()
     {
+        // Loading layouts
         $this->loadViewComponentsAs('lte', [
             Sidebar::class,
             Navbar::class,
@@ -91,6 +94,12 @@ class LaravelTemplateServiceProvider extends ServiceProvider
             Footer::class,
             MenuItem::class,
             Breadcrumb::class,
+        ]);
+
+        // Loading fields
+        $this->loadViewComponentsAs('lte-field', [
+            Input::class,
+            Password::class,
         ]);
     }
 }
