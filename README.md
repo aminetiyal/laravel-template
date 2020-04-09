@@ -1,11 +1,13 @@
-# Very short description of the package
+# Laravel Template
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aminetiyal/laravel-template.svg?style=flat-square)](https://packagist.org/packages/aminetiyal/laravel-template)
 [![Build Status](https://img.shields.io/travis/aminetiyal/laravel-template/master.svg?style=flat-square)](https://travis-ci.org/aminetiyal/laravel-template)
 [![Quality Score](https://img.shields.io/scrutinizer/g/aminetiyal/laravel-template.svg?style=flat-square)](https://scrutinizer-ci.com/g/aminetiyal/laravel-template)
 [![Total Downloads](https://img.shields.io/packagist/dt/aminetiyal/laravel-template.svg?style=flat-square)](https://packagist.org/packages/aminetiyal/laravel-template)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This package provide an easy way to use the most popular OpenSource templates on your Laravel Application.
+
+For now this package support only [AdminLte 3.0](https://github.com/ColorlibHQ/AdminLTE) template, but more templates will be added later.
 
 ## Installation
 
@@ -17,8 +19,20 @@ composer require aminetiyal/laravel-template
 
 ## Usage
 
+To start using the AdminLte template, you need to publish the assets first
 ``` php
-// Usage description here
+php artisan vendor:publish --tag template-adminlte-assets
+```
+
+Then publish the config file to edit **routes** and **menus**
+``` php
+php artisan vendor:publish --tag template-config
+```
+
+You can edit **views** and **lang** files after publish
+``` php
+php artisan vendor:publish --tag template-adminlte-views
+php artisan vendor:publish --tag template-lang
 ```
 
 ### Testing
