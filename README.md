@@ -1,4 +1,4 @@
-# Laravel Template
+``# Laravel Template
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aminetiyal/laravel-template.svg?style=flat-square)](https://packagist.org/packages/aminetiyal/laravel-template)
 [![Build Status](https://img.shields.io/travis/aminetiyal/laravel-template/master.svg?style=flat-square)](https://travis-ci.org/aminetiyal/laravel-template)
@@ -17,9 +17,7 @@ You can install the package via composer:
 composer require aminetiyal/laravel-template
 ```
 
-## Usage
-
-To start using the AdminLte template, you need to publish the assets first
+You need to publish the assets after installation
 ``` php
 php artisan vendor:publish --tag template-adminlte-assets
 ```
@@ -35,6 +33,26 @@ php artisan vendor:publish --tag template-adminlte-views
 php artisan vendor:publish --tag template-lang
 ```
 
+## Usage
+
+Just extends the view that you want to use between **_main_**, **_login_**, **_register_**, **_password.reset_**, **_password.confirm_** and **_password.email_**:
+``` php
+@extends('template::lte.main')
+```
+
+And the sections are:
+``` php
+@section('pageTitle','test')
+
+@section('content')
+
+@endsection
+```
+
+And also you can use Blade component to generate form:
+``` php
+// tobe documented
+```
 ### Testing
 
 ``` bash
