@@ -17,6 +17,6 @@ class Styles extends Component
 
     public function render()
     {
-        return view('template::components.lte._layouts.styles');
+        return view('template::lte.components._layouts.styles');
     }
 }

@@ -35,13 +35,13 @@ class LaravelTemplateServiceProvider extends ServiceProvider
 
             // Publishing the views.
             $this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/template'),
-            ], 'laravel-template');
+                __DIR__.'/../resources/views/lte' => resource_path('views/vendor/template/lte'),
+            ], 'template-adminlte');
 
             // Publishing the translation files.
             $this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/template'),
-            ], 'laravel-template');
+                __DIR__.'/../resources/lang' => resource_path('lang/vendor/template/'),
+            ], 'template-lang');
 
             // Publishing assets.
             /*$this->publishes([

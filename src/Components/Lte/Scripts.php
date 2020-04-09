@@ -15,6 +15,6 @@ class Scripts extends Component
 
     public function render()
     {
-        return view('template::components.lte._layouts.scripts');
+        return view('template::lte.components._layouts.scripts');
     }
 }

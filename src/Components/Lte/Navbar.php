@@ -23,6 +23,6 @@ class Navbar extends Component
      */
     public function render()
     {
-        return view('template::components.lte._layouts.navbar');
+        return view('template::lte.components._layouts.navbar');
     }
 }
