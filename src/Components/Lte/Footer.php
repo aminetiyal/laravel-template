@@ -13,6 +13,6 @@ class Footer extends Component
 
     public function render()
     {
-        return view('template::components.lte.footer');
+        return view('template::components.lte._layouts.footer');
     }
 }

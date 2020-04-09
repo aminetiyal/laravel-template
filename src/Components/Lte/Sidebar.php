@@ -15,6 +15,6 @@ class Sidebar extends Component
 
     public function render()
     {
-        return view('template::components.lte.sidebar');
+        return view('template::components.lte._layouts.sidebar');
     }
 }

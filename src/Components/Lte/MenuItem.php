@@ -96,6 +96,6 @@ class MenuItem extends Component
 
     public function render()
     {
-        return view('template::components.lte.menu-item');
+        return view('template::components.lte._layouts.menu-item');
     }
 }

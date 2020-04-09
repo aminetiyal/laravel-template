@@ -16,6 +16,6 @@ class Breadcrumb extends Component
 
     public function render()
     {
-        return view('template::components.lte.breadcrumb');
+        return view('template::components.lte._layouts.breadcrumb');
     }
 }
