@@ -18,36 +18,31 @@ class LaravelTemplateServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'template');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'template');
 
-        $this->loadComponents();
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'template');
 
-        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'template');
+        $this->bootAdminLte();
 
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
+            // config
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('template.php'),
-            ], 'config');
+                __DIR__ . '/../config/config.php' => config_path('template.php'),
+            ], 'template-config');
 
-
-            // Publishing the views.
-            $this->publishes([
-                __DIR__.'/../resources/views/lte' => resource_path('views/vendor/template/lte'),
-            ], 'template-adminlte');
 
             // Publishing the translation files.
             $this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/template/'),
+                __DIR__ . '/../resources/lang' => resource_path('lang/vendor/template/'),
             ], 'template-lang');
 
             // Publishing assets.
             /*$this->publishes([
                 __DIR__.'/../resources/assets' => public_path('vendor/laravel-template'),
             ], 'assets');*/
-
 
 
             // Registering package commands.
@@ -61,7 +56,7 @@ class LaravelTemplateServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'template');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'template');
 
         // Register the main class to use with the facade
         $this->app->singleton('template', function () {
@@ -69,7 +64,24 @@ class LaravelTemplateServiceProvider extends ServiceProvider
         });
     }
 
-    public function loadComponents()
+    public function bootAdminLte()
+    {
+        $this->loadAdminLteComponents();
+
+        if ($this->app->runningInConsole()) {
+            // Publishing the views.
+            $this->publishes([
+                __DIR__ . '/../resources/views/lte' => resource_path('views/vendor/template/lte'),
+            ], 'template-adminlte-views');
+
+            // Publishing assets.
+            $this->publishes([
+                __DIR__.'/../resources/assets/lte' => public_path('vendor/laravel-template/lte'),
+            ], 'template-adminlte-assets');
+        }
+    }
+
+    public function loadAdminLteComponents()
     {
         $this->loadViewComponentsAs('lte', [
             Sidebar::class,
