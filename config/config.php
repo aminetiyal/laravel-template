@@ -15,6 +15,19 @@ return [
         'copyright' => 'AdminLTE',
         'version' => '1.0.0'
     ],
+
+    'routes' => [
+        'dashboard' => 'home',
+        'logout' => 'logout',
+        'login' => 'login',
+        'register' => 'register',
+        'password_confirm' => 'password.confirm',
+        'password_email' => 'password.email',
+        'password_update' => 'password.update',
+        'password_request' => 'password.request',
+        'password_reset' => 'password.reset',
+        'profile' => false,
+    ],
     /**
      *  [
      *      'title' => @string,
