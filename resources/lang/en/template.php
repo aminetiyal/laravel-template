@@ -3,7 +3,9 @@
 return [
     'profile' => 'Profile',
     'email' => 'Email',
+    'full_name' => 'Full Name',
     'password' => 'Password',
+    'confirmation' => 'Confirmation',
     'retype_password' => 'Retype password',
     'remember_me' => 'Remember Me',
     'register' => 'Register',
