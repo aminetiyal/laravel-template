@@ -14,24 +14,14 @@
 
                     <x-lte-field-input type="email" :label="__('template::template.email')" name="email"
                                        icon="fas fa-envelope" required></x-lte-field-input>
-                    <x-lte-field-password :label="__('template::template.Password')" name="password" icon="fas fa-lock"
+                    <x-lte-field-password :label="__('template::template.password')" name="password" icon="fas fa-lock"
                                           required></x-lte-field-password>
 
-                    <div class="row">
-                        <div class="col-8">
-                            <div class="icheck-primary">
-                                <input type="checkbox" id="remember">
-                                <label for="remember">
-                                    @lang('template::template.remember_me')
-                                </label>
-                            </div>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-4">
+                    <div class="row mb-2">
+                        <div class="col-4 mx-auto">
                             <button type="submit"
                                     class="btn btn-primary btn-block">@lang('template::template.sign_in')</button>
                         </div>
-                        <!-- /.col -->
                     </div>
                 </form>
                 @if(Route::has(config('templates.routes.password_request','password.request')))

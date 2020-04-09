@@ -3,6 +3,7 @@
 namespace Aminetiyal\LaravelTemplate;
 
 use Aminetiyal\LaravelTemplate\Components\Lte\Breadcrumb;
+use Aminetiyal\LaravelTemplate\Components\Lte\Field\Checkbox;
 use Aminetiyal\LaravelTemplate\Components\Lte\Field\Input;
 use Aminetiyal\LaravelTemplate\Components\Lte\Field\Password;
 use Aminetiyal\LaravelTemplate\Components\Lte\Footer;
@@ -100,6 +101,7 @@ class LaravelTemplateServiceProvider extends ServiceProvider
         $this->loadViewComponentsAs('lte-field', [
             Input::class,
             Password::class,
+            Checkbox::class,
         ]);
     }
 }
