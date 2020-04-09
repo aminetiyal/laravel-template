@@ -28,38 +28,42 @@ return [
      */
     'menu-items' => [
         [
-            'title' => 'Dashboard',
+            'type' => 'header',
+            'title' => 'HEADER'
+        ],
+        [
+            'title' => 'Menu One',
             'icon' => 'fas fa-tachometer-alt',
             'submenus' => [
                 [
-                    'title' => 'V1',
+                    'title' => 'SubMenu One',
                     'link' => [
-                        'type' => 'route',
-                        'value' => 'menu1.menu1'
+                        'type' => 'url',
+                        'value' => ''
                     ],
                     'icon' => 'far fa-circle'
                 ],
                 [
-                    'title' => 'V2',
+                    'title' => 'SubMenu Two',
                     'link' => [
-                        'type' => 'route',
-                        'value' => 'menu1.menu2'
+                        'type' => 'url',
+                        'value' => ''
                     ],
                     'icon' => 'far fa-circle',
                     'submenus' => [
                         [
-                            'title' => 'Legacy',
+                            'title' => 'SubMenu One',
                             'link' => [
-                                'type' => 'route',
-                                'value' => 'menu3.menu1'
+                                'type' => 'url',
+                                'value' => ''
                             ],
                             'icon' => 'far fa-circle'
                         ],
                         [
-                            'title' => 'Test',
+                            'title' => 'SubMenu Two',
                             'link' => [
-                                'type' => 'route',
-                                'value' => 'menu3.menu2'
+                                'type' => 'url',
+                                'value' => ''
                             ],
                             'icon' => 'far fa-circle'
                         ],
@@ -68,10 +72,10 @@ return [
             ]
         ],
         [
-            'title' => 'Widget',
+            'title' => 'Menu Two',
             'link' => [
-                'type' => 'route', // route, url
-                'value' => 'menu2'
+                'type' => 'url', // route, url
+                'value' => ''
             ],
             'icon' => 'fas fa-th',
         ],

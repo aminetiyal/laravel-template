@@ -16,7 +16,11 @@
             @if(config('template.sidebar.small-text')) text-sm @endif" data-widget="treeview" role="menu"
                 data-accordion="false">
                 @foreach($menus as $menu)
-                    <x-lte-menu-item :menu="$menu"></x-lte-menu-item>
+                    @if(array_key_exists('type',$menu) && $menu['type'] == 'header')
+                        <li class="nav-header">{{$menu['title']}}</li>
+                    @else
+                        <x-lte-menu-item :menu="$menu"></x-lte-menu-item>
+                    @endif
                 @endforeach
             </ul>
         </nav>
