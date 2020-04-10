@@ -69,7 +69,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email test@yopmail.com instead of using the issue tracker.
+If you discover any security related issues, please email [aminetiyal@gmail.com](mailto:aminetiyal@gmail.com) instead of using the issue tracker.
 
 ## Credits
 
