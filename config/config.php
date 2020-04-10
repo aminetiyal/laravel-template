@@ -26,6 +26,7 @@ return [
         'password_update' => 'password.update',
         'password_request' => 'password.request',
         'password_reset' => 'password.reset',
+        'verification_resend' => 'verification.resend',
         'profile' => false,
     ],
     /**
