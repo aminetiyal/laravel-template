@@ -18,7 +18,7 @@
                                           required></x-lte-field-password>
 
                     <div class="row mb-2">
-                        <div class="col-4 mx-auto">
+                        <div class="col-12 mx-auto">
                             <button type="submit"
                                     class="btn btn-primary btn-block">@lang('template::template.sign_in')</button>
                         </div>
