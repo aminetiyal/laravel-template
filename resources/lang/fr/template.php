@@ -21,4 +21,9 @@ return [
     'password_reset_message' => 'Réinitialisation du mot de passe',
     'reset_password' => 'Réinitialisation du mot de passe',
     'send_password_reset_link' => 'Envoi de la réinitialisation du mot de passe',
+    'verify_message' => 'Vérifiez votre adresse email',
+    'verify_email_sent' => 'Un nouveau lien de vérification a été envoyé à votre adresse email.',
+    'verify_check_your_email' => 'Avant de continuer, veuillez vérifier votre courrier électronique pour un lien de vérification.',
+    'verify_if_not_recieved' => 'Si vous n\'avez pas reçu l\'email',
+    'verify_request_another' => 'cliquer ici pour faire une autre demande',
 ];
