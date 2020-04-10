@@ -1,4 +1,4 @@
-``# Laravel Template
+# Laravel Template
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aminetiyal/laravel-template.svg?style=flat-square)](https://packagist.org/packages/aminetiyal/laravel-template)
 [![Build Status](https://img.shields.io/travis/aminetiyal/laravel-template/master.svg?style=flat-square)](https://travis-ci.org/aminetiyal/laravel-template)
