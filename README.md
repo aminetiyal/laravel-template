@@ -49,9 +49,11 @@ And the sections are:
 @endsection
 ```
 
-And also you can use Blade component to generate form:
+And also you can use Blade component to generate inputs like:
 ``` php
-// tobe documented
+<x-lte-field-input type="" label="" name="" icon="" required/>
+<x-lte-field-password label="" name="" icon="" required/>
+<x-lte-field-checkbox label="" name=""/>
 ```
 ### Testing
 
