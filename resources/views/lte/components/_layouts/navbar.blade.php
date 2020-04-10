@@ -15,8 +15,9 @@
                     <li class="user-footer">
                         <a href="#" class="btn btn-default btn-flat" style="width: 45%">@lang('template::template.profile')</a>
                         <a class="btn btn-default btn-flat float-right" href="#" style="width: 45%"
+                           data-toggle="tooltip" data-placement="bottom" title="@lang('template::template.log_out')"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="fa fa-fw fa-power-off"></i> @lang('template::template.log_out')
+                            <i class="fa fa-fw fa-power-off"></i>
                         </a>
                         <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
                             @csrf
