@@ -49,7 +49,7 @@ class ProfileController extends Controller
 
         $validator->validate();
 
-        auth()->user()->password = $request->input('password');
+        auth()->user()->password = bcrypt($request->input('password'));
 
         auth()->user()->update();
 
