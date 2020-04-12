@@ -9,6 +9,7 @@ class Input extends Component
 {
     public $type;
     public $name;
+    public $placeholder;
     public $label;
     public $value;
     public $class;
@@ -20,6 +21,7 @@ class Input extends Component
     public function __construct(
         $type = 'text',
         $name = null,
+        $placeholder = null,
         $label = null,
         $value = null,
         $class = null,
@@ -31,6 +33,7 @@ class Input extends Component
     {
         $this->type = $type;
         $this->name = $name ?? str_replace('-', '_', Str::kebab($label));
+        $this->placeholder = $placeholder ?? (!$name ? str_replace('-', '_', Str::kebab($label)) : '');
         $this->label = $label;
         $this->value = ($type == 'password') ? '' : old($this->name, ($value ?? ((isset($model)) ? $model->{$this->name} : '')));
         $this->class = $class;

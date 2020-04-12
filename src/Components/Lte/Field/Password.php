@@ -8,6 +8,7 @@ class Password extends Component
 {
     public $name;
     public $label;
+    public $placeholder;
     public $class;
     public $required;
     public $icon;
@@ -15,6 +16,7 @@ class Password extends Component
     public function __construct(
         $name = null,
         $label = null,
+        $placeholder = null,
         $class = null,
         $required = false,
         $icon = null
@@ -22,6 +24,7 @@ class Password extends Component
     {
         $this->label = $label;
         $this->setName($name);
+        $this->placeholder = $placeholder ?? (!$name ? str_replace('-', '_', Str::kebab($label)) : '');
         $this->class = $class;
         $this->required = $required;
         $this->icon = $icon;
