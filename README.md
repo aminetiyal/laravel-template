@@ -55,6 +55,45 @@ And also you can use Blade component to generate inputs like:
 <x-lte-field-password label="" name="" icon="" required/>
 <x-lte-field-checkbox label="" name=""/>
 ```
+### Features
+
+#### Profile
+
+To enable profile feature you need to publish the **ProfileController** first,
+``` php
+php artisan vendor:publish --tag template-profile-controller
+```
+
+then register the following **routes**:
+
+``` php
+Route::get('/profile', 'Auth\ProfileController@index')->name('profile.index');
+Route::put('/profile', 'Auth\ProfileController@update')->name('profile.update');
+Route::put('/profile/updatePassword', 'Auth\ProfileController@updatePassword')->name('profile.updatePassword');
+```
+
+Finally you can enable the feature from _**template.php**_ config file
+
+``` php
+'routes' => [
+    'profile' => [
+        'enabled' => true,
+    ],
+],
+```
+
+Also you can update profile routes by changing the following fields:
+
+``` php
+'routes' => [
+    'profile' => [
+        'index' => 'profile.index',
+        'update' => 'profile.update',
+        'updatePassword' => 'profile.updatePassword'
+    ],
+],
+```
+
 ### Testing
 
 ``` bash
