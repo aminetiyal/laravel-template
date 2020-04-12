@@ -11,7 +11,7 @@
                 <form action="{{route(config('template.routes.password_confirm','password.confirm'))}}" method="post">
                     {{ csrf_field() }}
 
-                    <x-lte-field-password :label="__('template::template.password')" name="email"
+                    <x-lte-field-password :placeholder="__('template::template.password')" name="email"
                                        icon="fas fa-lock" required></x-lte-field-password>
 
                     <div class="row mb-2">

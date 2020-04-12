@@ -12,9 +12,9 @@
                 <form action="{{route(config('template.routes.login','login'))}}" method="post">
                     {{ csrf_field() }}
 
-                    <x-lte-field-input type="email" :label="__('template::template.email')" name="email"
+                    <x-lte-field-input type="email" :placeholder="__('template::template.email')" name="email"
                                        icon="fas fa-envelope" required></x-lte-field-input>
-                    <x-lte-field-password :label="__('template::template.password')" name="password" icon="fas fa-lock"
+                    <x-lte-field-password :placeholder="__('template::template.password')" name="password" icon="fas fa-lock"
                                           required></x-lte-field-password>
 
                     <div class="row mb-2">

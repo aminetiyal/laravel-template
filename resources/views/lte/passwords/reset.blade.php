@@ -12,10 +12,10 @@
                 <form action="{{route(config('template.routes.password_update','password.update'))}}" method="post">
                     {{ csrf_field() }}
 
-                    <x-lte-field-password :label="__('template::template.password')"
+                    <x-lte-field-password :placeholder="__('template::template.password')"
                                        icon="fas fa-lock" required></x-lte-field-password>
 
-                    <x-lte-field-password :label="__('template::template.confirmation')"
+                    <x-lte-field-password :placeholder="__('template::template.confirmation')"
                                        icon="fas fa-lock" required></x-lte-field-password>
 
                     <div class="row mb-2">

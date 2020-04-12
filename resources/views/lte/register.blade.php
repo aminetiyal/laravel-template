@@ -12,11 +12,11 @@
                 <form action="{{route(config('template.routes.register','register'))}}" method="post">
                     {{ csrf_field() }}
 
-                    <x-lte-field-input type="text" :label="__('template::template.full_name')"
+                    <x-lte-field-input type="text" :placeholder="__('template::template.full_name')"
                                        name="name" icon="fas fa-user" required></x-lte-field-input>
-                    <x-lte-field-input type="email" :label="__('template::template.email')" icon="fas fa-envelope" required></x-lte-field-input>
-                    <x-lte-field-password :label="__('template::template.password')" icon="fas fa-lock" required></x-lte-field-password>
-                    <x-lte-field-password :label="__('template::template.confirmation')" icon="fas fa-lock" required></x-lte-field-password>
+                    <x-lte-field-input type="email" :placeholder="__('template::template.email')" icon="fas fa-envelope" required></x-lte-field-input>
+                    <x-lte-field-password :placeholder="__('template::template.password')" icon="fas fa-lock" required></x-lte-field-password>
+                    <x-lte-field-password :placeholder="__('template::template.confirmation')" icon="fas fa-lock" required></x-lte-field-password>
 
                     <div class="row mb-2">
                         <div class="col-12 mx-auto">
