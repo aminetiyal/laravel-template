@@ -81,6 +81,11 @@ class LaravelTemplateServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../resources/assets/lte' => public_path('vendor/laravel-template/lte'),
             ], 'template-adminlte-assets');
+
+            // Publishing profile controller.
+            $this->publishes([
+                __DIR__.'/../src/Http/Controllers/Auth/' => app_path('Http/Controllers/Auth'),
+            ], 'template-profile-controller');
         }
     }
 

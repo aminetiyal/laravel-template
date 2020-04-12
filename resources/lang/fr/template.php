@@ -4,12 +4,19 @@ return [
     'profile' => 'Profil',
     'email' => 'Email',
     'full_name' => 'Nom Complet',
+
     'password' => 'Mot de passe',
+    'old_password' => 'Ancien mot de passe',
+    'new_password' => 'Nouveau mot de passe',
+    'retype_password' => 'Entrez à nouveau le mot de passe',
+
     'confirmation' => 'Confirmation',
     'confirm' => 'Confirmer',
-    'retype_password' => 'Entrez à nouveau le mot de passe',
+    'update' => 'Modifier',
     'remember_me' => 'Se souvenir de moi',
     'register' => 'Enregistrement',
+    'profile' => 'Profil',
+
     'register_a_new_membership' => 'Enregistrer un nouveau membre',
     'i_forgot_my_password' => 'J\'ai oublié mon mot de passe',
     'i_already_have_a_membership' => 'J\'ai déjà un compte',

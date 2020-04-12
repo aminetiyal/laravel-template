@@ -4,12 +4,19 @@ return [
     'profile' => 'Profile',
     'email' => 'Email',
     'full_name' => 'Full Name',
+
     'password' => 'Password',
+    'old_password' => 'Old Password',
+    'new_password' => 'New Password',
+    'retype_password' => 'Retype password',
+
     'confirmation' => 'Confirmation',
     'confirm' => 'Confirm',
-    'retype_password' => 'Retype password',
+    'update' => 'Update',
     'remember_me' => 'Remember Me',
     'register' => 'Register',
+    'profile' => 'Profile',
+
     'register_a_new_membership' => 'Register a new membership',
     'i_forgot_my_password' => 'I forgot my password',
     'i_already_have_a_membership' => 'I already have a membership',
