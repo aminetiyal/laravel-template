@@ -3,7 +3,7 @@
 namespace Aminetiyal\LaravelTemplate\Components\Lte\Field;
 
 use Illuminate\View\Component;
-use \Illuminate\Support\Str;
+use Illuminate\Support\Str;
 
 class Input extends Component
 {
