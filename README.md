@@ -33,6 +33,11 @@ php artisan vendor:publish --tag template-adminlte-views
 php artisan vendor:publish --tag template-lang
 ```
 
+This command still in dev:
+``` php
+php artisan template:install --routes --auth --home 
+```
+
 ## Usage
 
 Just extends the view that you want to use between **_main_**, **_login_**, **_register_**, **_password.reset_**, **_password.confirm_** and **_password.email_**:
