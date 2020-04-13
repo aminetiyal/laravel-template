@@ -28,7 +28,7 @@ return [
         'password_reset' => 'password.reset',
         'verification_resend' => 'verification.resend',
         'profile' => [
-            'enabled' => true, // register profile routes before enabling this feature
+            'enabled' => false, // register profile routes before enabling this feature
             'index' => 'profile.index',
             'update' => 'profile.update',
             'updatePassword' => 'profile.updatePassword'
