@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <form action="{{route(config('template.routes.password_confirm','password.confirm'))}}" method="post">
-                    {{ csrf_field() }}
+                    @csrf
 
                     <x-lte-field-password :placeholder="__('template::template.password')" name="email"
                                        icon="fas fa-lock" required></x-lte-field-password>

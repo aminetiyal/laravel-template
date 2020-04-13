@@ -10,7 +10,7 @@
             <div class="card-body register-card-body">
                 <p class="login-box-msg">@lang('template::template.register_a_new_membership')</p>
                 <form action="{{route(config('template.routes.register','register'))}}" method="post">
-                    {{ csrf_field() }}
+                    @csrf
 
                     <x-lte-field-input type="text" :placeholder="__('template::template.full_name')"
                                        name="name" icon="fas fa-user" required></x-lte-field-input>

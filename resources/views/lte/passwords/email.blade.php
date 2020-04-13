@@ -15,8 +15,7 @@
                     </div>
                 @endif
                 <form action="{{route(config('template.routes.password_email','password.email'))}}" method="post">
-                    {{ csrf_field() }}
-
+                    @csrf
                     <x-lte-field-input type="email" :placeholder="__('template::template.email')" name="email"
                                        icon="fas fa-envelope" required></x-lte-field-input>
 

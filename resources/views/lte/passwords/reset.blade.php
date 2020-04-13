@@ -10,7 +10,7 @@
             <div class="card-body login-card-body">
                 <p class="login-box-msg">@lang('template::template.reset_password')</p>
                 <form action="{{route(config('template.routes.password_update','password.update'))}}" method="post">
-                    {{ csrf_field() }}
+                    @csrf
 
                     <x-lte-field-password :placeholder="__('template::template.password')"
                                        icon="fas fa-lock" required></x-lte-field-password>

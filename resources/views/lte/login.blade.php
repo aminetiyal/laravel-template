@@ -10,7 +10,7 @@
             <div class="card-body login-card-body">
                 <p class="login-box-msg">@lang('template::template.login_message')</p>
                 <form action="{{route(config('template.routes.login','login'))}}" method="post">
-                    {{ csrf_field() }}
+                    @csrf
 
                     <x-lte-field-input type="email" :placeholder="__('template::template.email')" name="email"
                                        icon="fas fa-envelope" required></x-lte-field-input>
