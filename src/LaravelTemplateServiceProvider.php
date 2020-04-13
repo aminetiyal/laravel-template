@@ -43,6 +43,15 @@ class LaravelTemplateServiceProvider extends ServiceProvider
                 __DIR__ . '/../resources/lang' => resource_path('lang/vendor/template/'),
             ], 'template-lang');
 
+            // Publishing profile controller & view.
+            $this->publishes(
+                [__DIR__ . '/../src/Http/Controllers/Auth/ProfileController.php' => app_path('Http/Controllers/Auth/ProfileController.php')]
+                , 'template-profile-controller');
+
+            $this->publishes(
+                [__DIR__ . '/../resources/views/lte/profile.blade.php' => resource_path('views/auth/profile.blade.php')],
+                'template-profile-view');
+
             // Publishing assets.
             /*$this->publishes([
                 __DIR__.'/../resources/assets' => public_path('vendor/laravel-template'),
@@ -54,20 +63,6 @@ class LaravelTemplateServiceProvider extends ServiceProvider
                 TemplateInstall::class,
             ]);
         }
-    }
-
-    /**
-     * Register the application services.
-     */
-    public function register()
-    {
-        // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'template');
-
-        // Register the main class to use with the facade
-        $this->app->singleton('template', function () {
-            return new LaravelTemplate;
-        });
     }
 
     public function bootAdminLte()
@@ -82,13 +77,8 @@ class LaravelTemplateServiceProvider extends ServiceProvider
 
             // Publishing assets.
             $this->publishes([
-                __DIR__.'/../resources/assets/lte' => public_path('vendor/laravel-template/lte'),
+                __DIR__ . '/../resources/assets/lte' => public_path('vendor/laravel-template/lte'),
             ], 'template-adminlte-assets');
-
-            // Publishing profile controller.
-            $this->publishes([
-                __DIR__.'/../src/Http/Controllers/Auth/' => app_path('Http/Controllers/Auth'),
-            ], 'template-profile-controller');
         }
     }
 
@@ -111,5 +101,19 @@ class LaravelTemplateServiceProvider extends ServiceProvider
             Password::class,
             Checkbox::class,
         ]);
+    }
+
+    /**
+     * Register the application services.
+     */
+    public function register()
+    {
+        // Automatically apply the package configuration
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'template');
+
+        // Register the main class to use with the facade
+        $this->app->singleton('template', function () {
+            return new LaravelTemplate;
+        });
     }
 }

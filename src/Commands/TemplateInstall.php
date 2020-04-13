@@ -77,6 +77,9 @@ class TemplateInstall extends Command
             file_put_contents(resource_path($file), $content);
         }
 
+        $this->call('vendor:publish', ['--tag' => 'template-profile-controller']);
+        $this->call('vendor:publish', ['--tag' => 'template-profile-view']);
+
         $this->comment('Authentication views updated successfully.');
     }
 
