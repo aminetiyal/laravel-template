@@ -6,7 +6,9 @@ $(function () {
     $('.datatable').DataTable();
 
     //Select2 triggered by JQuery
-    $('.select2j').select2();
+    $('.select2j').select2({
+        theme: 'bootstrap4'
+    });
 
     //Time Picker
     $('.timepicker').datetimepicker({
