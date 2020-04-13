@@ -1,0 +1,4 @@
+
+Route::get('/profile', 'Auth\ProfileController@index')->name('profile.index');
+Route::put('/profile', 'Auth\ProfileController@update')->name('profile.update');
+Route::put('/profile/updatePassword', 'Auth\ProfileController@updatePassword')->name('profile.updatePassword');

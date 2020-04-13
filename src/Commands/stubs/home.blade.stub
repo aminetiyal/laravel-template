@@ -1,0 +1,7 @@
+@extends('template::lte.main')
+
+@section('pageTitle', 'Home')
+
+@section('content')
+    {{-- Content Here --}}
+@endsection

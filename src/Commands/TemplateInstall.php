@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\File;
 class TemplateInstall extends Command
 {
     protected $signature = 'template:install' .
+    '{--routes : Add template routes}' .
     '{--auth : Update Auth views}' .
     '{--home : Update Home view}';
 
@@ -36,6 +37,9 @@ class TemplateInstall extends Command
 
     public function handle()
     {
+        if ($this->option('routes')) {
+            $this->exportRoutes();
+        }
         if ($this->option('home')) {
             $this->exportHomeView();
         }
@@ -50,11 +54,7 @@ class TemplateInstall extends Command
             return;
         }
 
-        $content = '@extends(\'template::lte.main\')' . PHP_EOL . PHP_EOL .
-            '@section(\'pageTitle\', \'Home\')' . PHP_EOL . PHP_EOL .
-            '@section(\'content\')' . PHP_EOL .
-            '   {{-- Content Here --}}' . PHP_EOL .
-            '@endsection';
+        $content = File::get(__DIR__ . '/stubs/home.blade.stub');
 
         file_put_contents(resource_path($this->homeView), $content);
 
@@ -78,5 +78,26 @@ class TemplateInstall extends Command
         }
 
         $this->comment('Authentication views updated successfully.');
+    }
+
+    protected function exportRoutes()
+    {
+        if (!$this->confirm('Install Profile Routes?')) {
+            return;
+        }
+
+        $file = File::get(base_path('routes/web.php'));
+        $content = File::get(__DIR__ . '/stubs/routes.stub');
+
+        if (!strpos($file, $content)) {
+            File::append(
+                base_path('routes/web.php'),
+                file_get_contents(__DIR__.'/stubs/routes.stub'),
+                FILE_APPEND
+            );
+
+            $this->comment('Profile routes installed successfully.');
+            return;
+        }
     }
 }
