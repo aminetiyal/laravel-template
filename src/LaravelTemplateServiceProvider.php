@@ -2,6 +2,7 @@
 
 namespace Aminetiyal\LaravelTemplate;
 
+use Aminetiyal\LaravelTemplate\Commands\TemplateInstall;
 use Aminetiyal\LaravelTemplate\Components\Lte\Breadcrumb;
 use Aminetiyal\LaravelTemplate\Components\Lte\Field\Checkbox;
 use Aminetiyal\LaravelTemplate\Components\Lte\Field\Input;
@@ -49,7 +50,9 @@ class LaravelTemplateServiceProvider extends ServiceProvider
 
 
             // Registering package commands.
-            // $this->commands([]);
+            $this->commands([
+                TemplateInstall::class,
+            ]);
         }
     }
 
