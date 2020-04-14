@@ -12,19 +12,31 @@ $(function () {
 
     //Time Picker
     $('.timepicker').datetimepicker({
-        format: 'HH:mm'
+        ignoreReadonly: true,
+        format: 'HH:mm',
+        icons: {
+            time: 'far fa-clock',
+            date: 'far fa-calendar'
+        }
     });
 
     //Date Picker
     $('.datepicker').datetimepicker({
+        ignoreReadonly: true,
         format: 'DD-MM-YYYY',
+        icons: {
+            time: 'far fa-clock',
+            date: 'far fa-calendar'
+        }
     });
 
     //Datetime Picker
     $('.datetimepicker').datetimepicker({
+        ignoreReadonly: true,
         format: 'DD-MM-YYYY HH:mm',
         icons: {
-            time: "fa fa-clock"
+            time: 'far fa-clock',
+            date: 'far fa-calendar'
         }
     });
 });
