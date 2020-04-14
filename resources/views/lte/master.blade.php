@@ -12,6 +12,12 @@
 
 @yield('body')
 
+@hasSection('appBody')
+    <div id="app">
+        @yield('appBody')
+    </div>
+@endif
+
 <x-lte-scripts></x-lte-scripts>
 
 </body>
