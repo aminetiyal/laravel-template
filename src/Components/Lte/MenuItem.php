@@ -44,7 +44,11 @@ class MenuItem extends Component
     public function renderLink()
     {
         if ($this->menu['link']['type'] == 'route') {
-            $this->link = route($this->menu['link']['value']);
+            if (is_array($this->menu['link']['value'])) {
+                $this->link = route(current($this->menu['link']['value']), end($this->menu['link']['value']));
+            } else {
+                $this->link = route($this->menu['link']['value']);
+            }
         } elseif ($this->menu['link']['type'] == 'url') {
             $this->link = url($this->menu['link']['value']);
         }
@@ -86,7 +90,7 @@ class MenuItem extends Component
             array_key_exists('link', $menu) &&
             array_key_exists('value', $menu['link']) &&
             array_key_exists('type', $menu['link']) &&
-            in_array($menu['link']['type'], ['url','route'])
+            in_array($menu['link']['type'], ['url', 'route'])
         ) {
             $link = $menu['link']['type']($menu['link']['value']);
         }
