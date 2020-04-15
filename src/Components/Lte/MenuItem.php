@@ -41,17 +41,27 @@ class MenuItem extends Component
         $this->menu = $menu;
     }
 
-    public function renderLink()
+    public function renderLink(array $menu = null)
     {
-        if ($this->menu['link']['type'] == 'route') {
-            if (is_array($this->menu['link']['value'])) {
-                $this->link = route(current($this->menu['link']['value']), end($this->menu['link']['value']));
+        $external = !is_null($menu);
+
+        $menu = $menu ?? $this->menu;
+
+        if ($menu['link']['type'] == 'route') {
+            if (is_array($menu['link']['value'])) {
+                $link = route(current($menu['link']['value']), end($menu['link']['value']));
             } else {
-                $this->link = route($this->menu['link']['value']);
+                $link = route($menu['link']['value']);
             }
-        } elseif ($this->menu['link']['type'] == 'url') {
-            $this->link = url($this->menu['link']['value']);
+        } elseif ($menu['link']['type'] == 'url') {
+            $link = url($menu['link']['value']);
         }
+
+        if ($external) {
+            return $link;
+        }
+
+        $this->link = $link;
     }
 
     public function renderTreeView()
@@ -92,7 +102,7 @@ class MenuItem extends Component
             array_key_exists('type', $menu['link']) &&
             in_array($menu['link']['type'], ['url', 'route'])
         ) {
-            $link = $menu['link']['type']($menu['link']['value']);
+            $link = $this->renderLink($menu);
         }
 
         return $link ?? null;
