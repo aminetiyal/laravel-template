@@ -7,6 +7,7 @@ use Aminetiyal\LaravelTemplate\Components\Lte\Breadcrumb;
 use Aminetiyal\LaravelTemplate\Components\Lte\Field\Checkbox;
 use Aminetiyal\LaravelTemplate\Components\Lte\Field\Input;
 use Aminetiyal\LaravelTemplate\Components\Lte\Field\Password;
+use Aminetiyal\LaravelTemplate\Components\Lte\Field\Textarea;
 use Aminetiyal\LaravelTemplate\Components\Lte\Footer;
 use Aminetiyal\LaravelTemplate\Components\Lte\MenuItem;
 use Aminetiyal\LaravelTemplate\Components\Lte\Navbar;
@@ -100,6 +101,7 @@ class LaravelTemplateServiceProvider extends ServiceProvider
             Input::class,
             Password::class,
             Checkbox::class,
+            Textarea::class
         ]);
     }
 

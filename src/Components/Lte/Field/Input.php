@@ -27,7 +27,6 @@ class Input extends Component
         $class = null,
         $readonly = null,
         $required = false,
-        $checked = false,
         $icon = null
     )
     {
@@ -35,14 +34,12 @@ class Input extends Component
         $this->name = $name ?? str_replace('-', '_', Str::kebab($label));
         $this->placeholder = $placeholder ?? (!$name ? str_replace('-', '_', Str::kebab($label)) : '');
         $this->label = $label;
-        $this->value = ($type == 'password') ? '' : old($this->name, ($value ?? ((isset($model)) ? $model->{$this->name} : '')));
+        $this->value = old($this->name, ($value ?? ''));
         $this->class = $class;
         $this->readonly = $readonly;
         $this->required = $required;
-        $this->checked = $checked;
         $this->icon = $icon;
     }
-
 
     public function render()
     {
