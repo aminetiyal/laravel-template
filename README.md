@@ -57,6 +57,7 @@ And the sections are:
 And also you can use Blade component to generate inputs like:
 ``` php
 <x-lte-field-input type="" label="" name="" icon="" required/>
+<x-lte-field-textarea label="" name="" icon="" required/>
 <x-lte-field-password label="" name="" icon="" required/>
 <x-lte-field-checkbox label="" name=""/>
 ```
