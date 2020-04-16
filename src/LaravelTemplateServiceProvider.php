@@ -12,7 +12,7 @@ use Aminetiyal\LaravelTemplate\Components\Lte\Footer;
 use Aminetiyal\LaravelTemplate\Components\Lte\MenuItem;
 use Aminetiyal\LaravelTemplate\Components\Lte\Navbar;
 use Aminetiyal\LaravelTemplate\Components\Lte\Scripts;
-use Aminetiyal\LaravelTemplate\Components\Lte\sidebar;
+use Aminetiyal\LaravelTemplate\Components\Lte\Sidebar;
 use Aminetiyal\LaravelTemplate\Components\Lte\Styles;
 use Illuminate\Support\ServiceProvider;
 
